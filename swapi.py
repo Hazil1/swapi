@@ -49,12 +49,3 @@ def save_sw_data():
 
 if __name__ == '__main__':
     save_sw_data()
-
-
-# api = APIRequester(base_url='https://swapi.dev/api')
-# response = api.get()
-# #print(response.json())
-
-# sw_req = SWRequester(base_url='https://swapi.dev/api')
-# print(sw_req.get_sw_categories())
-# # print(sw_req.get_sw_info('people'))
