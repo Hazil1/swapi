@@ -35,13 +35,14 @@ class SWRequester(APIRequester):
 
 
 def save_sw_data():
-    Path('data').mkdir(exist_ok=True)
+    folder = 'data'
+    Path(folder).mkdir(exist_ok=True)
 
     sw_request = SWRequester('https://swapi.dev/api')
     categories = sw_request.get_sw_categories()
 
     for category in categories:
-        path = f'data/{category}.txt'
+        path = f'{folder}/{category}.txt'
         with open(path, 'w') as f:
             category_data = sw_request.get_sw_info(category)
             f.write(category_data)
